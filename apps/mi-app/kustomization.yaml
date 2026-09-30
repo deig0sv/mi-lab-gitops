@@ -6,4 +6,5 @@ resources:
 - service.yaml
 
 labels:
-  env: laboratorio
+- pairs:
+    env: laboratorio
