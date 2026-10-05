@@ -21,12 +21,12 @@ jobs:
       - name: Actualizar la etiqueta de la imagen con Kustomize
         run: |
           cd apps/mi-app
-          kustomize edit set image nginx=nginx:${{ github.sha }}
+          kustomize edit set image nginx=nginx:1.26-alpine
 
       - name: Hacer Commit y Push de los cambios a Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add apps/mi-app/kustomization.yaml
-          git commit -m "chore(ci): update nginx image tag to ${{ github.sha }}" || exit 0
+          git commit -m "chore(ci): update nginx image to official 1.26-alpine" || exit 0
           git push
