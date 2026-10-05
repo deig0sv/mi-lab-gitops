@@ -11,4 +11,4 @@ labels:
 images:
 - name: nginx
   newName: nginx
-  newTag: 3b68a1fac1c94348ca6897adfaa07b07a00c4ee2
+  newTag: 1.26-alpine
