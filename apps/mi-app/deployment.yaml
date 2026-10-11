@@ -17,3 +17,5 @@ spec:
         image: nginx:1.25-alpine
         ports:
         - containerPort: 80
+        # ESTE COMANDO ROTO HARÁ QUE EL POD FALLE INMEDIATAMENTE
+        command: ["nginx", "-g", "daemon off;", "--config-invalid-flag"]
